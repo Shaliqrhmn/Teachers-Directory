@@ -1,0 +1,40 @@
+<!--<script>-->
+<!--    $("#btnsave").click(function() {-->
+<!--    console.log("save Button Clicked");-->
+<!--    let fname = $("id_first_name").val();-->
+<!--    let lname = $("id_last_name").val();-->
+<!--    let profilepic = $("id_profile_pic").val();-->
+<!--    let email = $("id_email_address").val();-->
+<!--    let phone = $("id_phone_number").val();-->
+<!--    let room = $("id_room_number").val();-->
+<!--    let subjects = $("id_subjects_taught").val();-->
+<!--    let csr = $("input[name=csrfmiddlewaretoken").val();-->
+<!--    if (fname == ""){-->
+<!--        console.log("please Enter the first Name")-->
+<!--        } else if (lname = ""){-->
+<!--        console.log("Please fill Up all the fields")-->
+<!--        } else {-->
+<!--&lt;!&ndash;        console.log(fname);&ndash;&gt;-->
+<!--&lt;!&ndash;        console.log(lname);&ndash;&gt;-->
+<!--&lt;!&ndash;        console.log(profilepic);&ndash;&gt;-->
+<!--&lt;!&ndash;        console.log(email);&ndash;&gt;-->
+<!--&lt;!&ndash;        console.log(phone);&ndash;&gt;-->
+<!--&lt;!&ndash;        console.log(room);&ndash;&gt;-->
+<!--&lt;!&ndash;        console.log(subjects);&ndash;&gt;-->
+<!--            mydata = { first_name: fname, lastname:lname, profile_picture:profilepic, email_address:email, phone_number:phone, room_number:room, subjects_taught:subjects, csrfmiddlewaretoken:csr};-->
+<!--            $.ajax({-->
+<!--                url: "{% url "loginapp:save" %}",-->
+<!--                method: "POST",-->
+<!--                data : mydata,-->
+<!--                success: function (data){-->
+<!--                if (data.status == "Save") {-->
+<!--                    console.log("Form Submitted Successfully");-->
+<!--                    }-->
+<!--                    if (data.status == 0){-->
+<!--                        console.log("Unable to save");-->
+<!--                        }-->
+<!--                },-->
+<!--        });-->
+<!--       }-->
+<!--      });-->
+<!--</script>-->

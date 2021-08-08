@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="container mt-5">
+    <h2 class="text-center alert alert-danger">Directory Operations</h2>
+    <div class="row">
+        <div class="col-sm-4">
+            <h4 class="text-center alert alert-info">ADD</h4>
+        </div>
+        <div>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" name="submit" class="btn btn-success" id="btnsave" value="save">
+            </form>
+        </div>
+        <div class="col-sm-7">
+            <h4 class="text-center alert alert-info">Show Details</h4>
+        </div>
+    </div>
+</div>
+
+
+{%endblock%}

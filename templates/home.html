@@ -1,0 +1,26 @@
+{% extends "base.html" %} 
+{% block content %}
+
+{% csrf_token %}
+<div class="container">
+    <div class="text-left" style="padding-top: 25px;">
+        <a class="btn btn-dark" href="{% url 'loginapp:add' %}">Add Teacher</a>
+        <a class="btn btn-danger" href="{% url 'loginapp:logout' %}">Logout</a>
+    </div>
+    <div class="row">
+        <div class="col-md-8 mt-3 left">
+            {% for item in items %}
+            <div class="card mb-4">
+                <div class="card-body">
+
+                    <a href="{% url 'loginapp:detail' item.id %}"><h2 class="card-title">{{ item.first_name }} {{ item.last_name }}</h2></a>
+                    <p class="card-text text-muted h6">{{ item.email_address }} | {{ item.phone_number}} </p>
+                    <p class="card-text">{{item.subjects_taught}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{%endblock%}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Filter List{% endblock title %}
+
+{% block content %}
+    <div>
+        <form method="GET" class="shadow p-3 mb-5 bg-white rounded">
+            <div class="form-group" style="text-align:left">
+            {{filter.form.as_p}}
+            <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </form>
+    </div>
+    <div style="text-align:center">
+        <div class="col-sm-8">
+            <h4 class="text-center alert alert-info">Details</h4>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Subjects</th>
+                    </tr>
+                <tbody>
+                {% for snippet in filter.qs %}
+                <tr>
+                    <td>{{snippet.id}}</td>
+                    <td>{{snippet.first_name}}</td>
+                    <td>{{snippet.last_name}}</td>
+                    <td>{{snippet.phone_number}}</td>
+                    <td>{{snippet.subjects_taught}}</td>
+
+                </tr>
+                {% endfor %}
+                </tbody>
+                </thead>
+
+            </table>
+            </div>
+        </div>
+{% endblock content %}
